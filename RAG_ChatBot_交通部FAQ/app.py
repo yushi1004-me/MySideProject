@@ -10,6 +10,8 @@ import csv
 import datetime
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
 os.environ["TOKENIZERS_PARALLELISM"] = "false"  # 避免tokenizers錯誤
 
 # 初始化與載入
@@ -19,7 +21,9 @@ with open("faq_texts.pkl", "rb") as f:
 index = faiss.read_index("faq.index")  # FAISS 建立的語意查詢資料庫
 model = SentenceTransformer("BAAI/bge-large-zh")  # hugguing face上的將文字轉向量的中文語意模型
 # 初始化 Groq API
-client = Groq(api_key="*********")  # 用來發送LLM請求（Groq API）
+load_dotenv()  # 會自動讀取 .env
+GROQ_API_KEY = os.getenv("API_KEY")  # 取得變數
+client = Groq(api_key=GROQ_API_KEY)  # 用來發送LLM請求（Groq API）
 
 # 初始化 SQLite 資料庫（如不存在則創建）
 def init_db():
