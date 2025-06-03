@@ -1,0 +1,9 @@
+# 不要追蹤 API 憑證
+.env
+
+# macOS 系統自動產生
+.DS_Store
+
+# Python 編譯暫存
+__pycache__/
+*.pyc
