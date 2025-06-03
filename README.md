@@ -9,6 +9,7 @@
 | 專案名稱 | 說明 | 技術關鍵字 | 狀態 |
 |----------|------|-------------|------|
 | [`RAG_ChatBot_交通部FAQ`](./RAG_ChatBot_交通部FAQ) | 利用 RAG 架構與 LLM 模型，建立智慧客服系統，回覆交通部常見問題，內涵chatbot、內部統計圖表、資料搜集資料庫等 | `FAISS`, `Groq API`, `LLaMA3`, `Gradio`, `Streamlit`, `SQLite` | ✅ 已完成初版 |
+| [`電動車新聞爬蟲及統計分析`](./DDCAR_EV)  | To be continue... | | |
 | To be continue...  | To be continue... | | |
 
 ---
