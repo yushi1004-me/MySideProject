@@ -19,7 +19,7 @@ with open("faq_texts.pkl", "rb") as f:
 index = faiss.read_index("faq.index")  # FAISS 建立的語意查詢資料庫
 model = SentenceTransformer("BAAI/bge-large-zh")  # hugguing face上的將文字轉向量的中文語意模型
 # 初始化 Groq API
-client = Groq(api_key="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")  # 用來發送LLM請求（Groq API）
+client = Groq(api_key="*********")  # 用來發送LLM請求（Groq API）
 
 # 初始化 SQLite 資料庫（如不存在則創建）
 def init_db():
